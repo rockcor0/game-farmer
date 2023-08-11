@@ -5,7 +5,7 @@ using UnityEngine;
 public class CamaraJugador : MonoBehaviour
 {
 
-    private Vector3 desplazamiento = new Vector3(0, 13, -10);
+    private Vector3 desplazamiento = new Vector3(0, 12, -15);
     public GameObject Jugador;
 
     // Start is called before the first frame update

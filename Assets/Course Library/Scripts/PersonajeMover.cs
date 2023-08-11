@@ -11,6 +11,7 @@ public class PersonajeMover : MonoBehaviour
     public float floatLimiteX = 20.0f;
     public float floatLimiteZ = 20.0f;
     public GameObject pizza;
+    public GameObject banano;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,11 @@ public class PersonajeMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Return))
+        {
+            Instantiate(banano, transform.position + new Vector3(0, 1, 0), pizza.transform.rotation);
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             //Debug.Log("Lanzamiento pizza");
             Instantiate(pizza, transform.position + new Vector3(0,1,0), pizza.transform.rotation);
